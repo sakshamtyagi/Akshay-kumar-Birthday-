@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshay Kumar</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #000000;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+            height: 100vh;
+            /* background-color: #0fcff1a4; */
+        }
+
+        h1 {
+            color: #053df5;
+            font-size: 40px;
+            animation: blink 0.5s infinite;
+            text-shadow: 2px 2px #000000;
+            margin-top: -5px;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+ hr {
+    height: 3px;
+    border: 0;
+    background-color: black;
+ }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .qualities {
+            margin-left: 400px;
+            padding: 20px;
+            max-width: 750px;
+            background-color: #ffffff;
+            box-shadow: 2px 4px 8px rgb(0, 0, 0);
+            border-radius: 10px;
+            margin-top: -20px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 30px rgb(255, 0, 0);
+            float: left;
+            margin-left: 40px;
+            margin-top: 60px;
+        }
+        #play-button {
+            font-size: 15px;
+            background-color: #ff8902d5;
+            border-color: #ca4242;
+            padding: 3px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-left: -1170px;
+            margin-top: 7px;
+            font-weight: bold;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #7f8c8d;
+            
+        }
+
+        /* Confetti styling */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #e74c3c;
+            animation: confetti-fall 8s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-150vh) translateX(0);
+                opacity: 100;
+            }
+            100% {
+                transform: translateY(190vh) translateX(20vw) rotate(720deg);
+                opacity: 100;
+            }
+        }
+
+        .confetti:nth-child(odd) {
+            background-color: #f1c40f;
+        }
+
+        .confetti:nth-child(even) {
+            background-color: #2ecc71;
+        }
+
+        /* Heart animation styling */
+        .heart {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            transform: rotate(45deg);
+            animation: floatUp 7s ease-in-out infinite;
+            animation-delay: calc(var(--i) * 0.5s);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: -25px;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(45deg) scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(45deg) scale(2.2);
+                opacity: 0;
+            }}
+
+        /* For 768px screen size */
+
+            @media (max-width: 768px) 
+    
+        {
+            h1 {
+                font-size: 26px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+            #play-button {
+            font-size: 10px;
+            background-color: #ff8902d5;
+            border-color: #ca4242;
+            padding: 3px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: auto;
+            margin-left: auto;
+        }
+            .qualities {
+                margin: 1px;
+                padding: 10px;
+                max-width: 100%;
+                margin-top: 400px;
+            }
+
+            img {
+                max-width: 100%;
+                margin: 10px auto;
+            }
+
+            .footer {
+                font-size: 12px;
+            }
+        
+        .heart {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            transform: rotate(45deg);
+            animation: floatUp 7s ease-in-out infinite;
+            animation-delay: calc(var(--i) * 0.5s);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: -25px;
+        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(45deg) scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-340vh) rotate(45deg) scale(2.2);
+                opacity: 0;
+            }}
+
+            .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #e74c3c;
+            animation: confetti-fall 8s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-20vh) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(60vh) translateX(20vw) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .confetti:nth-child(odd) {
+            background-color: #f1c40f;
+        }
+
+        .confetti:nth-child(even) {
+            background-color: #2ecc71;
+        }
+        }
+
+        /* For 320px screen size*/
+        @media (max-width: 320px) 
+    
+        {
+            h1 {
+                font-size: 26px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+            #play-button {
+            font-size: 10px;
+            background-color: #ff8902d5;
+            border-color: #ca4242;
+            padding: 3px 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: auto;
+            margin-left: auto;
+        }
+            .qualities {
+                margin: 1px;
+                padding: 10px;
+                max-width: 100%;
+                margin-top: 400px;
+            }
+
+            img {
+                max-width: 100%;
+                margin: 10px auto;
+            }
+
+            .footer {
+                font-size: 12px;
+            }
+        
+        .heart {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            transform: rotate(45deg);
+            animation: floatUp 7s ease-in-out infinite;
+            animation-delay: calc(var(--i) * 0.5s);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -25px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: -25px;
+        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(45deg) scale(0.8);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-340vh) rotate(45deg) scale(2.2);
+                opacity: 0;
+            }}
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #e74c3c;
+            animation: confetti-fall 8s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(-380vh) translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(60vh) translateX(20vw) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        .confetti:nth-child(odd) {
+            background-color: #f1c40f;
+        }
+
+        .confetti:nth-child(even) {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉Happy Birthday 🎈 Akshay Kumar!🎉</h1>
+    
+    <hr>
+    <audio id="background-music" src="Akshayakshay.mp3" preload="auto" loop></audio>
+    <button id="play-button">Play Music</button>
+    <img src="Akshay kumar.jpg" alt="Akshay Kumar">
+    <div class="qualities">
+        <p>My entire childhood has been filled with joy and smiles because of Akshay Kumar. He means everything to me. His versatility across every genre—be it comedy, action, romance, or any other—has been nothing short of fabulous. He is the OG Khiladi of Bollywood, and without him, memes and entertainment wouldn't be the same. His action sequences are on another level, and his comedy is truly unmatched.</p>
+        <p>He is the only actor who has tackled biopics, real-life incidents, social issues, and even sensitive topics like menstruation hygiene and sex education with both courage and perfection. His dedication to fitness and his routine are also something I deeply admire because he stands out as one of the fittest individuals in the industry.</p>
+        <p>Akshay Kumar's love for his country and its army is incredibly endearing. He is a top taxpayer in our country and has initiated the 'Bharat Ke Veer' initiative to support army officers. Despite his focus on work, family, and life, he faces trolling from various quarters, which deeply hurts me. It pains to see someone who has contributed so much to entertainment, the army, and the nation being targeted intentionally. Yet, his strength to handle trolling with such grace is inspiring. I love him dearly, admire him profoundly, and hope to meet him at least once in my lifetime because my life will feel incomplete without that moment.</p>
+        <p><strong>HAPPY BIRTHDAY MY SUPERSTAR</strong></p>
+        
+    </div>
+    <div class="footer">
+        <p>Created by Akshay Kumar's most lovable admirer, Saksham Tyagi</p>
+    </div>
+    
+    <script>
+        window.onload = function() {
+             // Function to play background music
+             const music = document.getElementById('background-music');
+             const playButton = document.getElementById('play-button');
+
+playButton.addEventListener('click', function() {
+    if (music.paused) {
+        music.play();
+        playButton.textContent = 'Pause Music';
+    } else {
+        music.pause();
+        playButton.textContent = 'Play Music';
+    }
+});
+
+            // Function to create confetti
+            function createConfetti() {
+                for (let i = 0; i < 100; i++) {
+                    let confetti = document.createElement('div');
+                    confetti.classList.add('confetti');
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.animationDelay = Math.random() * 2 + 's';
+                    confetti.style.animationDuration = Math.random() * 3 + 2 + 's'; // Random duration
+                    document.body.appendChild(confetti);
+
+                    // Remove the confetti after animation ends
+                    confetti.addEventListener('animationend', () => {
+                        confetti.remove();
+                    });
+                }
+            }
+
+            // Function to create hearts
+            function createHearts() {
+                const heartCount = 20; // Number of hearts to generate
+                for (let i = 0; i < heartCount; i++) {
+                    let heart = document.createElement('div');
+                    heart.className = 'heart';
+                    heart.style.setProperty('--i', Math.random() * 10 - 5);
+                    heart.style.left = Math.random() * 100 + 'vw';
+                    heart.style.animationDuration = Math.random() * 3 + 4 + 's';
+                    document.body.appendChild(heart);
+                }
+            }
+
+            // Start the confetti and heart animations
+            createConfetti();
+            createHearts();
+        }
+    </script>
+</body>
+</html>
